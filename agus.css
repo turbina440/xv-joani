@@ -1,0 +1,82 @@
+  *{margin: 0;
+    padding: 0} 
+
+
+
+   body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #00a45312;
+        }
+        .cuenta-regresiva {
+            background: #00a453;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 1em;
+            padding: 0.5em;
+        }
+        .cr-time > span {
+            font-size: 42px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .cr-desc {
+            color: yellow;
+        }
+        .cr-block {
+            background: #0000002e;
+            border-radius: 10px;
+            padding: 0.5em 0.8em;
+        }
+        .foto{width: 100%;
+            background-color: yellowgreen;
+            display: flex;
+            padding: 10px 0;
+            text-align: center;
+            justify-content: center;
+         }
+         img{width: 50%;}
+         h2{color: red;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;}
+    @media screen and(min-width:300px){span{
+        background-color:red;
+    }
+    }
+    .fa-whatsapp{ width:10px;
+    }
+
+    .whtsp{width: 100%;
+        height: 10px;
+        text-align: center;
+        background: snow  ;
+
+       
+    }
+    p {background: snow;}
+
+    .dd {background: snow}
+
+    .dd img{height: 50px;
+        margin-top:     20px;
+        width:  50px}
+
+    .corazon{background: SNOW;
+        text-align: center;
+     }
+
+     .corazon img{width: 100px;
+     animation:beat 1s linear infinite;}
+
+    @keyframes beat{
+        0%{transform:scale(0.75 );opacity: 0.5;background: SNOW
+        }
+        50%{transform:scale(1);opacity:1;background: SNOW;
+
+        }
+        100%{transform:scale(0.75);opacity:0.5;background: SNOW;
+
+        }
+    }
+    .c2 {background: yellow;}

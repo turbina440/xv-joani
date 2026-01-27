@@ -1,0 +1,41 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+BODY{
+	font-family: sans-serif;
+	background: snow;
+}
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	border-bottom: .8vw solid blueviolet;
+	overflow: hidden;
+	animation: anim 2.5s linear forwards infinite;
+}
+
+.box h1{
+	font-size: 6vw;
+	color: lightpink;
+}
+@keyframes anim {
+	0%{width:0 ;
+		height: 0;
+
+	}
+	30%{width:50% ;height: 0;
+
+	}
+	60%{width: 80vw;height: 12vw;
+
+	}
+	80%{width: 80vw;
+height:12vw ;
+	}
+	100%{width:80vw ;
+height:12vw ;
+	}
+}

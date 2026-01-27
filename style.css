@@ -1,0 +1,335 @@
+
+/*movile first*/
+
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: "Great Vibes" ,Brush Script MT, sans-serif;
+            background: snow;
+        }
+        .main{position: fixed;
+            top: 0;
+            z-index: 10}
+        .portada img{border-radius:  50%;
+            width: 250px;
+            outline-style: dashed;}
+        .cuenta-regresiva {
+            background: linear-gradient(#534a7a,lightpink,snow);
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 1em;
+            padding: 0.5em;
+        }
+        .cr-time > span {
+            font-size: 15px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .cr-desc {
+            color: lightpink;font-size: 10px;
+
+        }
+        .cr-block {
+            background: linear-gradient(60deg,#534a7a,#8174b4);
+            border-radius: 10px;
+            padding: 0.1em 0.3em;
+            box-shadow:    10px 5px 5px hotpink ;
+        }
+        p{font-family: Brush Script MT;
+            padding: 5px}
+       
+         
+         h2{color: white    ;
+        text-align: center;
+    font-family: Brush Script MT , Geneva, Tahoma, sans-serif ;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+    margin-top: 0px;
+font-size: 20px;
+/*flash*/
+position: relative  ;
+text-transform:  uppercase   ;
+-webkit-box-reflect: bellow 1px linear-gradient(transparent  ,#0008);
+line-height:    0.7em;
+outline: none   ;
+animation:  animate 5s linear infinite  ;
+}*/
+h1{font-family: Brush Script MT , Geneva, Tahoma, sans-serif }
+
+        
+    .galeria{
+
+    aspect-ratio: 10/16;
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    text-align: center;
+
+}
+.portada{width: 100%;
+    margin-top: 250px;
+text-align:center  ;}
+
+
+.elementor-row{text-align: center;
+   
+}
+.elementor-row1{text-align: center;
+    margin: 0 10px 0 ;
+    border-radius: 20px;
+    background: #E9E7EB;}
+.galeria__imagen{
+    width: 100%;
+    left: 0;
+    position: sticky;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    object-fit: cover;
+     text-align: center;
+    justify-content: center;
+    
+    margin-top: 40px;
+    z-index: 1;
+   
+}
+.box{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-bottom: 1vw solid blueviolet;
+    overflow: hidden;
+    animation: anim 2.5s linear forwards ;
+}
+
+.box h1{
+    font-size: 6vw;
+    color: lightpink;
+}
+@keyframes anim {
+    0%{width:0 ;
+        height: 0;
+
+    }
+    30%{width:50% ;height: 0;
+
+    }
+    60%{width: 80vw;height: 12vw;
+
+    }
+    80%{width: 80vw;
+height:12vw ;
+    }
+    100%{width:80vw ;
+height:12vw ;
+    }
+}
+
+/*nuevas fotos*/
+.slider{width: 100%;
+height: 600px;
+overflow: hidden;}
+.slider ul{
+    display: flex;
+    animation: cambio 16s infinite alternate linear;
+    width: 400%;
+}
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+25%{margin-left: -100%;}
+45%{margin-left: -100%;}
+50%{margin-left: -200%;}
+70%{margin-left: -200%;}
+75%{margin-left: -300%;}
+100%{margin-left: -300%;}
+
+}
+.restan{
+    text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+    background-color: #534a7a;
+    padding: 0;
+
+
+}
+svg{margin-top: 40px}
+main {text-align: center;
+display:    none;}
+
+IFRAME{width: 300PX}
+
+ .corazon img{width: 150px;
+     animation:beat 1s linear infinite;}
+
+    @keyframes beat{
+        0%{transform:scale(0.75 );opacity: 0.5;background: SNOW
+        }
+        50%{transform:scale(1);opacity:1;background: SNOW;
+
+        }
+        100%{transform:scale(0.75);opacity:0.5;background: SNOW;
+
+        }
+    }
+button{background: blueviolet;
+    border-radius: 10px;
+    margin: 20px 0 0 20px ;
+color: white;
+}
+img{width: 200px;
+}
+
+#modal::backdrop{background-color:  rgba(0, 0, 0,.55);}
+#abrirModal{margin-bottom: 50px}
+.regalos{
+    margin-top: 150px;
+}
+.regalos > h2 {
+     color:blueviolet;font-family: Brush Script MT , Geneva, Tahoma, sans-serifh3
+}
+.ropa{
+    margin-top:     40px;
+}
+
+
+
+/*responsive*/
+
+@media screen and (min-width:300px) AND (max-width:500px){
+    .galeria{
+        object-fit: cover;
+        text-align: center;
+
+    }
+    .elementor-row1{text-align: center;
+    margin: 0 10px 0 ;
+    border-radius: 20px;
+    background: #E9E7EB;}
+
+    h2{font-size:   40px}
+    .cr-time > span{ font-size: 25px;
+      }
+    .cr-block {
+            
+            border-radius: 10px;
+            padding: 0.3em 0.5em;
+
+
+}
+.cr-desc {
+           
+            font-size: 15px }
+
+/*whatsapp y corazon*/
+
+ .whtsp{width: 100%;
+        height: 10px;
+        padding-top: 10px;
+        text-align: center;
+        background: snow  ;
+
+       
+    }
+    p {
+    font-family: Brush Script MT}
+
+    .dd {background: snow}
+
+    .dd img{width:200px;
+        margin-top:     20px;
+        }
+
+    .corazon{background: SNOW;
+        text-align: center;
+     }
+
+     .corazon img{width: 150px;
+     animation:beat 1s linear infinite;}
+
+    @keyframes beat{
+        0%{transform:scale(0.75 );opacity: 0.5;background: SNOW
+        }
+        50%{transform:scale(1);opacity:1;background: SNOW;
+
+        }
+        100%{transform:scale(0.75);opacity:0.5;background: SNOW;
+
+        }
+    }
+     .regalos{
+    margin-top: 300px;}
+        
+      img{width:200px;}
+   .elementor-row1{text-align: center;
+    margin: 0 10px 0 ;
+    border-radius: 20px;
+    background: #E9E7EB;}  
+}
+
+
+
+@media screen and (min-width:500px) and (max-width:700px){
+    .galeria{
+        object-fit: cover;
+        text-align: center;
+
+    }
+    
+    h2{font-size: 45px}
+    .cr-time > span{ font-size: 30px;
+        }
+    .cr-block {
+            
+            border-radius: 10px;
+            padding: 0.5em 0.8em;
+
+
+}
+p{font-family: Brush Script MT}
+.cr-desc {
+           
+            font-size: 20px }
+}
+@media screen and (min-width:700px){
+    .galeria{
+        object-fit: cover;
+        text-align: center;
+
+    }
+    h2{font-size: 60px}
+    .cr-time > span{ font-size: 50px;
+        }
+    .cr-block {
+            
+            border-radius: 10px;
+            padding: 1em 1.5em;
+
+
+}
+img{width: 400px}
+.cr-desc {
+            
+            font-size: 30px }
+            .portada   {
+                margin-top: 300px;
+            }
+.dress img{
+    width:  350px;
+}            
+}
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="agus.css">
+    <script src="https://kit.fontawesome.com/173292014e.js" crossorigin="anonymous"></script>
+    <title>15 de Agus</title>
+</head>
+<body>
+   
+    <div class="main">
+        <div class="restan">
+            <span><h2>Solo faltan...</h2></span>
+        </div>
+        <section class="cuenta-regresiva">
+            <div class="cr-block">
+                <div class="cr-time">
+                    <span id="cre-dia">
+                        00
+                    </span>
+                </div>
+                <div class="cr-desc">
+                    Dia
+                </div>
+            </div>
+            <div class="cr-block">
+                <div class="cr-time">
+                    <span id="cre-hora">
+                        00
+                    </span>
+                </div>
+                <div class="cr-desc">
+                    Hora
+                </div>
+            </div>
+            <div class="cr-block">
+                <div class="cr-time">
+                    <span id="cre-minuto">
+                        00
+                    </span>
+                </div>
+                <div class="cr-desc">
+                    Minuto
+                </div>
+            </div>
+            <div class="cr-block">
+                <div class="cr-time">
+                    <span id="cre-segundo">
+                        00
+                    </span>
+                </div>
+                <div class="cr-desc">
+                    Segundo
+                </div>
+            </div>
+        </section>
+        <!--<div class="foto">
+            <img src="agus.jpeg">
+        </div>-->
+        <div class="whtsp">
+           <div class="dd">
+            <a href="https://facebook.com" target="blank"><img src="diseño sin título.png"></a>
+            </div>
+             <p>Confirma tu asistencia</p>
+            <div class="corazon">
+                <img  src="cc.png">
+                   
+            </div>  
+             <div class="c2">
+                <img src="https://logodownload.org/wp-content/uploads/2018/10/word-logo-0.png" title="gente" alt="noo"> 
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let diaEvento = new Date('Mar 16, 2024 21:00:00').getTime();
+
+        // diaEvento = new Date().getTime() + 1_000 * 20;
+
+        let relojE = document.getElementById('reloj');
+
+        const diaM = 86_400_000;
+        const horaM = 3_600_000;
+        const minutoM = 60_000;
+        const segundoM = 1_000;
+        const ejecutarReloj = setInterval(
+            () => {
+
+                let hoy = new Date().getTime();
+                let distancia = diaEvento - hoy;
+
+                let diaR = Math.trunc(distancia / diaM);
+
+                let horaR = Math.trunc((distancia % diaM) / horaM);
+
+                let minutoR = Math.trunc((distancia % horaM) / minutoM);
+
+                let segundoR = Math.trunc((distancia % minutoM) / segundoM);
+
+                if (distancia  < 1) {
+                    clearInterval(ejecutarReloj);
+                    diaEventoAhora();
+                }
+
+                pintarElementos(diaR, horaR, minutoR, segundoR);
+
+            }
+        , 1000);
+
+        let creDia = document.getElementById('cre-dia');
+        let creHora = document.getElementById('cre-hora');
+        let creMinuto = document.getElementById('cre-minuto');
+        let creSegundo = document.getElementById('cre-segundo');
+        function pintarElementos(dia, hora, minuto, segundo) {
+
+            segundo = (segundo < 10) ? '0' + segundo : segundo;
+
+            minuto = (minuto < 10) ? '0' + minuto : minuto;
+
+            hora = (hora < 10) ? '0' + hora : hora;
+
+            creDia.innerHTML = dia;
+            creHora.innerHTML = hora;
+            creMinuto.innerHTML = minuto;
+            creSegundo.innerHTML = segundo;
+        }
+
+        function diaEventoAhora () {
+            alert('Es hoy, es hoy...!!!');
+            // Todo el codigo cuando el evento llegue
+        }
+
+    </script>
+</body>
+</html>

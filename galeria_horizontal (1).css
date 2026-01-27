@@ -1,0 +1,18 @@
+.galeria{
+	aspect-ratio: 10/16;
+	display: flex;
+	width: 300px;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	position: relative;
+}
+
+
+.galeria__imagen{
+	width: 100%;
+	left: 0;
+	position: sticky;
+	border-radius: 5px;
+	scroll-snap-align: center;
+	object-fit: cover;
+}

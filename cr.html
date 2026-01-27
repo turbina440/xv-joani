@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>regresion</title>
+</head>
+<body>
+    <section>hola</section>
+	<div class="main">
+		<section class="cuenta_regresiva">
+			<div id="reloj"></div>
+		</section>
+	</div>
+	    <script>
+            let diaEvento = new Date('Mar 16,2024 21:00:00').getTime();
+            diaEvento = new Date().getTime() + 1000 * 20;
+            let relojE = document.getElementById('reloj');
+            
+            const diaM = 86_400_000;
+            const horaM = 3_600_000;
+            const minutoM = 60_000;
+            const segundoM = 1_000;
+                       
+            const ejecutarReloj = setInterval(
+	            ()=> {
+
+                    let hoy = new Date().getTime();
+		            let distancia = diaEvento - hoy;
+
+                    let diaR = Math.trunc(distancia / diaM);
+                    let horaR = Math.trunc((distancia % diaM) / horaM);
+                    let minutoR = Math.trunc((distancia % horaM) / minutoM);
+                    let segundoR = Math.trunc((distancia % minutoM) / segundoM);
+                    relojE.innerHTML = `${diaR}, ${horaR}, ${minutoR}, ${segundoR}`;
+                    console.log('minuto:',segundoR);
+
+                    if (distancia < 1) {
+                        clearInterval(ejecutarReloj);
+                        alert('Es hoy, Es hoy...')
+                    }
+	            }
+            ,1000);
+
+        </script>
+  
+</body>
+</html> 
+
